@@ -4,9 +4,9 @@ require("blink.cmp").setup({
 
 	keymap = {
 		preset = "default",
-        ["<Tab>"] = { "select_next", "fallback" },
-        ["<S-Tab>"] = { "select_prev", "fallback" },
-        ["<CR>"] = { "accept", "fallback" },
+		["<Tab>"] = { "select_next", "fallback" },
+		["<S-Tab>"] = { "select_prev", "fallback" },
+		["<CR>"] = { "accept", "fallback" },
 	},
 
 	appearance = {
@@ -22,11 +22,12 @@ require("blink.cmp").setup({
 	},
 
 	cmdline = {
+		enabled = true,
 		keymap = {
-			preset = "inherit",
+			preset = "cmdline",
 			["<CR>"] = { "accept_and_enter", "fallback" },
 		},
 	},
 
-	sources = { default = { "lsp" } },
+	sources = { default = { "lsp", "path", "buffer", "snippets" } },
 })
