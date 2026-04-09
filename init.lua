@@ -18,3 +18,4 @@ vim.pack.add{
 require "plugins.colorscheme"
 require "plugins.mason"
 require "plugins.lspconfig"
+require "plugins.blink"
