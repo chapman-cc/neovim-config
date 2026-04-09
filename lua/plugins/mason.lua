@@ -1,7 +1,9 @@
 local server_list = {
     -- LUA
     "lua_ls",
-    -- html
+    -- Vim
+    "vimls",
+    -- Html
     "html",
     -- CSS
     "cssls",
