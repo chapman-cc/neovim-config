@@ -1,5 +1,17 @@
 {
   "plugins": {
+    "blink-cmp-conventional-commits": {
+      "rev": "faa45344aab97aa33ece53938c4c3379760e61bd",
+      "src": "https://github.com/disrupted/blink-cmp-conventional-commits"
+    },
+    "blink-cmp-npm.nvim": {
+      "rev": "f316507437aa893dbb7aa6709ac9cd68375b3670",
+      "src": "https://github.com/alexandre-abrioux/blink-cmp-npm.nvim"
+    },
+    "blink-emoji.nvim": {
+      "rev": "066013e4c98a9318408ee3f1ca2dbcb6fa3e4c06",
+      "src": "https://github.com/moyiz/blink-emoji.nvim"
+    },
     "blink.cmp": {
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp",
