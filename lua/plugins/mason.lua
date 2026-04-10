@@ -5,6 +5,7 @@ local server_list = {
     "vimls",
     -- Html
     "html",
+    "emmet_language_server",
     -- CSS
     "cssls",
     "tailwindcss",
