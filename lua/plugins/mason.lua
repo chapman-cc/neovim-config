@@ -1,4 +1,4 @@
-local server_list = {
+local servers = {
     -- LUA
     "lua_ls",
     -- Vim
@@ -33,10 +33,10 @@ require("mason").setup({
 })
 
 require("mason-lspconfig").setup({
-    ensure_installed = server_list
+    ensure_installed = servers
 })
 
-for _, server in ipairs(server_list) do
+for _, server in ipairs(servers) do
     vim.lsp.enable(server)
 end
 
