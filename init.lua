@@ -14,6 +14,8 @@ vim.pack.add({
 	{ src = "https://github.com/alexandre-abrioux/blink-cmp-npm.nvim" },
 	{ src = "https://github.com/moyiz/blink-emoji.nvim" },
 
+    { src = "https://github.com/folke/which-key.nvim" },
+
 	{ src = "https://github.com/nvim-tree/nvim-tree.lua" },
 })
 
@@ -26,3 +28,4 @@ require("plugins.colorscheme")
 require("plugins.mason")
 require("plugins.blink")
 require("plugins.nvim-tree")
+require("plugins.which-key")
