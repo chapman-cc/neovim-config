@@ -20,7 +20,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-tree/nvim-tree.lua" },
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
 
-	{ src = "nvim-treesitter/nvim-treesitter" },
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
 })
 
 -- Configs

@@ -1,1 +1,33 @@
-require "nvim-treesitter" .setup()
+local ts = require("nvim-treesitter")
+
+ts.setup()
+ts.install({
+	"astro",
+	"bash",
+	"css",
+	"dockerfile",
+	"go",
+	"html",
+	"java",
+	"javascript",
+	"jq",
+	"jsdoc",
+	"json",
+	"jsx",
+	"lua",
+	"luadoc",
+	"nginx",
+	"python",
+	"regex",
+	"rust",
+	"scss",
+	"sql",
+	"svelte",
+	"terraform",
+	"tsx",
+	"typescript",
+	"vim",
+	"vue",
+	"xml",
+	"yaml",
+})
