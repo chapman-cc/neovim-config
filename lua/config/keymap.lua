@@ -31,3 +31,7 @@ km.set("i", "{", "{}<Esc>i", { desc = "Add Closing Curly Brackets" })
 km.set("i", "[", "[]<Esc>i", { desc = "Add Closing Square Brackets" })
 km.set("i", "'", "''<Esc>i", { desc = "Add Closing Quotations" })
 km.set("i", "\"", "\"\"<Esc>i", { desc = "Add Closing Double Quotations" })
+
+km.set("n", "<leader>fm", function()
+	vim.lsp.buf.format()
+end, { desc = "Format current buffer" })
