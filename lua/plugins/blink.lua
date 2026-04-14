@@ -24,7 +24,7 @@ require("blink.cmp").setup({
 	cmdline = {
 		keymap = {
 			preset = "inherit",
-			["<CR>"] = { "accept_and_enter", "fallback" },
+			["<CR>"] = { "select_and_accept", "fallback" },
 		},
 		completion = { menu = { auto_show = true } },
 	},
