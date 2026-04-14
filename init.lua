@@ -19,6 +19,8 @@ vim.pack.add({
 	-- nvim-tree
 	{ src = "https://github.com/nvim-tree/nvim-tree.lua" },
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
+
+	{ src = "nvim-treesitter/nvim-treesitter" },
 })
 
 -- Configs
@@ -31,3 +33,4 @@ require("plugins.mason")
 require("plugins.blink")
 require("plugins.nvim-tree")
 require("plugins.which-key")
+require("plugins.nvim-treesitter")
