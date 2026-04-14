@@ -20,3 +20,8 @@ km.set("n", "<leader>wd", "<C-w>c", { desc = "Delete Window", silent = true })
 km.set("n", "<leader>-", "<C-w>s", { desc = "Split Window Below", silent = true })
 km.set("n", "<leader>|", "<C-w>v", { desc = "Split Window Right", silent = true })
 
+-- Indetntation
+km.set("v", ">", ">gv", { desc = "Indent right and keep selection" })
+km.set("v", "<", "<gv", { desc = "Indent left and keep selection" })
+km.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+km.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
