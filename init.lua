@@ -16,7 +16,9 @@ vim.pack.add({
 
     { src = "https://github.com/folke/which-key.nvim" },
 
+	-- nvim-tree
 	{ src = "https://github.com/nvim-tree/nvim-tree.lua" },
+	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
 })
 
 -- Configs
