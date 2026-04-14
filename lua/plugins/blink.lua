@@ -6,7 +6,8 @@ require("blink.cmp").setup({
 		preset = "default",
 		["<Tab>"] = { "select_next", "fallback" },
 		["<S-Tab>"] = { "select_prev", "fallback" },
-		["<CR>"] = { "accept", "fallback" },
+		["<CR>"] = { "select_accept_and_enter", "fallback" },
+		["<Esc>"] = { "hide_documentation", "fallback" },
 	},
 
 	appearance = {
