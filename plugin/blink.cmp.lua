@@ -1,13 +1,13 @@
 require("blink.cmp").setup({
 	fuzzy = { implementation = "prefer_rust_with_warning" },
+
 	signature = { enabled = true },
 
 	keymap = {
 		preset = "default",
-		["<Tab>"] = { "select_next", "fallback" },
-		["<S-Tab>"] = { "select_prev", "fallback" },
-		["<CR>"] = { "select_accept_and_enter", "fallback" },
-		["<Esc>"] = { "hide_documentation", "fallback" },
+   	["<Tab>"] = { "select_next", "scroll_signature_up", "fallback" },
+   	["<S-Tab>"] = { "select_prev", "scroll_signature_down", "fallback" },
+   	["<CR>"] = { "accept", "fallback" },
 	},
 
 	appearance = {
@@ -15,23 +15,33 @@ require("blink.cmp").setup({
 		nerd_font_variant = "normal",
 	},
 
-	completion = {
+  completion = {
 		documentation = {
 			auto_show = true,
 			auto_show_delay_ms = 200,
 		},
 	},
-
+  
 	cmdline = {
+    enabled = true,
 		keymap = {
 			preset = "inherit",
-			["<CR>"] = { "select_and_accept", "fallback" },
+			["<CR>"] = { "accept", "fallback" },
+      ["<Esc>"] = { "hide", "fallback" }
 		},
-		completion = { menu = { auto_show = true } },
+    completion = {
+      ghost_text = { enabled = true },
+      menu = { auto_show = true },
+    }
 	},
 
 	sources = {
-		default = { "lsp", "path", "snippets", "buffer" },
+		default = { 
+      -- built-in
+      "lsp", "path", "snippets", "buffer",
+      -- plugins
+      "npm", "emoji", 
+    },
 		providers = {
 			npm = {
 				name = "npm",
@@ -46,18 +56,6 @@ require("blink.cmp").setup({
 					ignore = {},
 					only_semantic_versions = true,
 					only_latest_version = false,
-				},
-			},
-			conventional_commits = {
-				name = "Conventional Commits",
-				module = "blink-cmp-conventional-commits",
-				enabled = function()
-					return vim.bo.filetype == "gitcommit"
-				end,
-				---@module 'blink-cmp-conventional-commits'
-				---@type blink-cmp-conventional-commits.Options
-				opts = {
-					-- See Configuration section below for available options
 				},
 			},
 
