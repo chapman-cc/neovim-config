@@ -1,13 +1,21 @@
-local servers = { -- LUA
-"lua_ls", "emmylua_ls", -- Vim
-"vimls", -- Html
-"html", "emmet_language_server", -- CSS
-"cssls", "tailwindcss", -- Javascript / Typescript
-"oxlint", "vtsls", -- Rust
--- "bacon-ls", "bacon",
--- Bash
-"bashls", -- misc
-"jsonls", "yamlls", "marksman" }
+local servers = {
+  -- LUA
+  "lua_ls",
+  -- Vim
+  "vimls",
+  -- Html
+  "html", "emmet_language_server",
+  -- CSS
+  "cssls", "tailwindcss",
+  -- Javascript / Typescript
+  "oxlint", "vtsls",
+  -- Rust
+  -- "bacon-ls", "bacon",
+  -- Bash
+  "bashls",
+  -- misc
+  "jsonls", "yamlls", "marksman"
+}
 
 local has_loaded, error_msg = pcall(require, "mason")
 
