@@ -41,4 +41,6 @@ require("config.keymap")
 -- On load
 vim.api.nvim_create_autocmd("VimEnter", { callback = function()
 	vim.cmd.colorscheme("tokyonight-storm")
+  -- Update Mason parser
+  vim.cmd("MasonUpdate")
 end })
