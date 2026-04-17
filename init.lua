@@ -24,6 +24,8 @@ local lazy_modules = {
   {	src = "https://github.com/oskarnurm/koda.nvim", },
   {	src = "https://github.com/shaunsingh/nord.nvim", },
   { src = "https://github.com/datsfilipe/vesper.nvim" },
+  -- lazyvim doc completion
+  { src = "https://github.com/folke/lazydev.nvim" },
   -- nvim-tree
   {	src = "https://github.com/nvim-tree/nvim-tree.lua", },
   { src = "https://github.com/nvim-tree/nvim-web-devicons" },
