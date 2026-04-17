@@ -14,6 +14,8 @@ local eager_modules = {
   { src = "https://github.com/alexandre-abrioux/blink-cmp-npm.nvim" },
   { src = "https://github.com/disrupted/blink-cmp-conventional-commits" },
   { src = "https://github.com/moyiz/blink-emoji.nvim" },
+  -- which-key
+  { src = "https://github.com/folke/which-key.nvim" },
 }
 
 local lazy_modules = {
@@ -38,7 +40,3 @@ require("config.keymap")
 vim.api.nvim_create_autocmd("VimEnter", { callback = function()
 	vim.cmd.colorscheme("vesper")
 end })
-
--- Install Plugins
---
---    { src = "https://github.com/folke/which-key.nvim" },
