@@ -9,6 +9,11 @@ local eager_modules = {
   { src = "https://github.com/neovim/nvim-lspconfig" },
   -- nvim-treesitter
   { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
+  --	blink.cmp
+  { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1.0") },
+  { src = "https://github.com/alexandre-abrioux/blink-cmp-npm.nvim" },
+  { src = "https://github.com/disrupted/blink-cmp-conventional-commits" },
+  { src = "https://github.com/moyiz/blink-emoji.nvim" },
 }
 
 local lazy_modules = {
@@ -29,15 +34,11 @@ vim.pack.add(lazy_modules, { load = false })
 require("config.options")
 require("config.keymap")
 
+-- On load
 vim.api.nvim_create_autocmd("VimEnter", { callback = function()
 	vim.cmd.colorscheme("vesper")
 end })
 
 -- Install Plugins
---	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1.0") },
---	-- additional blink.cmp providers
---	{ src = "https://github.com/disrupted/blink-cmp-conventional-commits" },
---	{ src = "https://github.com/alexandre-abrioux/blink-cmp-npm.nvim" },
---	{ src = "https://github.com/moyiz/blink-emoji.nvim" },
 --
 --    { src = "https://github.com/folke/which-key.nvim" },

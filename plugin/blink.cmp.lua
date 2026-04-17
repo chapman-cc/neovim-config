@@ -23,6 +23,7 @@ require("blink.cmp").setup({
 	},
   
 	cmdline = {
+    enabled = true,
 		keymap = {
 			preset = "inherit",
 			["<CR>"] = { "accept", "fallback" },
@@ -35,56 +36,49 @@ require("blink.cmp").setup({
 	},
 
 	sources = {
-		default = { "lsp", "path", "snippets", "buffer" },
---		providers = {
---			npm = {
---				name = "npm",
---				module = "blink-cmp-npm",
---				async = true,
---				-- optional - make blink-cmp-npm completions top priority (see `:h blink.cmp`)
---				score_offset = 100,
---				-- optional - blink-cmp-npm config
---				---@module "blink-cmp-npm"
---				---@type blink-cmp-npm.Options
---				opts = {
---					ignore = {},
---					only_semantic_versions = true,
---					only_latest_version = false,
---				},
---			},
---			conventional_commits = {
---				name = "Conventional Commits",
---				module = "blink-cmp-conventional-commits",
---				enabled = function()
---					return vim.bo.filetype == "gitcommit"
---				end,
---				---@module 'blink-cmp-conventional-commits'
---				---@type blink-cmp-conventional-commits.Options
---				opts = {
---					-- See Configuration section below for available options
---				},
---			},
---
---			emoji = {
---				module = "blink-emoji",
---				name = "Emoji",
---				score_offset = 15, -- Tune by preference
---				opts = {
---					insert = true, -- Insert emoji (default) or complete its name
---					---@type string|table|fun():table
---					trigger = function()
---						return { ":" }
---					end,
---				},
---				should_show_items = function()
---					return vim.tbl_contains(
---						-- Enable emoji completion only for git commits and markdown.
---						-- By default, enabled for all file-types.
---						{ "gitcommit", "markdown" },
---						vim.o.filetype
---					)
---				end,
---			},
---		},
+		default = { 
+      -- built-in
+      "lsp", "path", "snippets", "buffer",
+      -- plugins
+      "npm", "emoji", 
+    },
+		providers = {
+			npm = {
+				name = "npm",
+				module = "blink-cmp-npm",
+				async = true,
+				-- optional - make blink-cmp-npm completions top priority (see `:h blink.cmp`)
+				score_offset = 100,
+				-- optional - blink-cmp-npm config
+				---@module "blink-cmp-npm"
+				---@type blink-cmp-npm.Options
+				opts = {
+					ignore = {},
+					only_semantic_versions = true,
+					only_latest_version = false,
+				},
+			},
+
+			emoji = {
+				module = "blink-emoji",
+				name = "Emoji",
+				score_offset = 15, -- Tune by preference
+				opts = {
+					insert = true, -- Insert emoji (default) or complete its name
+					---@type string|table|fun():table
+					trigger = function()
+						return { ":" }
+					end,
+				},
+				should_show_items = function()
+					return vim.tbl_contains(
+						-- Enable emoji completion only for git commits and markdown.
+						-- By default, enabled for all file-types.
+						{ "gitcommit", "markdown" },
+						vim.o.filetype
+					)
+				end,
+			},
+		},
 	},
 })
