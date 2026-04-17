@@ -25,6 +25,7 @@ local lazy_modules = {
 vim.pack.add(eager_modules, { load = true })
 vim.pack.add(lazy_modules, { load = false })
 
+-- Configs
 require("config.options")
 require("config.keymap")
 

@@ -6,7 +6,8 @@ require("blink.cmp").setup({
 		preset = "default",
 		["<Tab>"] = { "select_next", "fallback" },
 		["<S-Tab>"] = { "select_prev", "fallback" },
-		["<CR>"] = { "accept", "fallback" },
+		["<CR>"] = { "select_accept_and_enter", "fallback" },
+		["<Esc>"] = { "hide_documentation", "fallback" },
 	},
 
 	appearance = {
@@ -24,7 +25,7 @@ require("blink.cmp").setup({
 	cmdline = {
 		keymap = {
 			preset = "inherit",
-			["<CR>"] = { "accept_and_enter", "fallback" },
+			["<CR>"] = { "select_and_accept", "fallback" },
 		},
 		completion = { menu = { auto_show = true } },
 	},
