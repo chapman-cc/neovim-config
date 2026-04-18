@@ -1,45 +1,45 @@
 local opt = vim.opt
 
 -- 1. Interface & UI
-opt.background = "dark" -- "dark" or "light", used for highlight colors
-opt.number = true -- print the line number in front of each line
-opt.relativenumber = true -- show relative line number in front of each line
-opt.termguicolors = true -- enable 24-bit RGB color in the TUI
-opt.cursorline = true -- highlight the screen line of the cursor
-opt.signcolumn = "yes" -- when :and how to display the sign column
-opt.laststatus = 3 -- tells when last window has status lines
-opt.wrap = false -- long lines wrap and continue on the next line
+opt.background = "dark"       -- "dark" or "light", used for highlight colors
+opt.number = true             -- print the line number in front of each line
+opt.relativenumber = true     -- show relative line number in front of each line
+opt.termguicolors = true      -- enable 24-bit RGB color in the TUI
+opt.cursorline = true         -- highlight the screen line of the cursor
+opt.signcolumn = "yes"        -- when :and how to display the sign column
+opt.laststatus = 3            -- tells when last window has status lines
+opt.wrap = false              -- long lines wrap and continue on the next line
 -- 2. Performance & Behaviour
-opt.scrolloff = 8 -- minimum nr. of lines above and below cursor
-opt.sidescrolloff = 10 -- min. nr. of columns to left and right of cursor
-opt.undofile = true -- save undo information in a file
-opt.undolevels = 10000 -- maximum number of changes that can be undone
+opt.scrolloff = 8             -- minimum nr. of lines above and below cursor
+opt.sidescrolloff = 10        -- min. nr. of columns to left and right of cursor
+opt.undofile = true           -- save undo information in a file
+opt.undolevels = 10000        -- maximum number of changes that can be undone
 -- opt.undodir		        -- where to store undo files
-opt.updatetime = 200 -- after this many milliseconds flush swap file
+opt.updatetime = 200          -- after this many milliseconds flush swap file
 opt.clipboard = "unnamedplus" -- use the clipboard as the unnamed register
-opt.mouse = "a" -- enable the use of mouse clicks
-opt.confirm = true -- ask what to do about unsaved/read-only files
-opt.virtualedit = "block" -- when to use virtual editing
-opt.timeoutlen = 300 -- time out time in milliseconds
+opt.mouse = "a"               -- enable the use of mouse clicks
+opt.confirm = true            -- ask what to do about unsaved/read-only files
+opt.virtualedit = "block"     -- when to use virtual editing
+opt.timeoutlen = 300          -- time out time in milliseconds
 -- 3. Tabs & Indentation
-opt.expandtab = true -- use spaces when <Tab> is inserted
-opt.shiftwidth = 2 -- number of spaces to use for (auto)indent step
-opt.tabstop = 2 -- number of columns between two tab stops
-opt.softtabstop = 2 -- number of columns between two soft tab stops
-opt.smartindent = true -- smart autoindenting for C programs
+opt.expandtab = true          -- use spaces when <Tab> is inserted
+opt.shiftwidth = 2            -- number of spaces to use for (auto)indent step
+opt.tabstop = 2               -- number of columns between two tab stops
+opt.softtabstop = 2           -- number of columns between two soft tab stops
+opt.smartindent = true        -- smart autoindenting for C programs
 -- 4. Search
-opt.ignorecase = true -- ignore case in search patterns
-opt.smartcase = true -- no ignore case when pattern has uppercase
+opt.ignorecase = true         -- ignore case in search patterns
+opt.smartcase = true          -- no ignore case when pattern has uppercase
 opt.inccommand = "nosplit"
 
 -- 5. Windows, split
 opt.splitbelow = true -- new window from split is below the current one
 opt.splitright = true -- new window is put right of the current one
 -- 6. Disable backup
-opt.autowrite = true -- automatically write file if changed
-opt.backup = false -- keep backup file after overwriting a file
+opt.autowrite = true  -- automatically write file if changed
+opt.backup = false    -- keep backup file after overwriting a file
 opt.writebackup = false
- -- make a backup before overwriting a file
+-- make a backup before overwriting a file
 
 -- opt.autochdir		    -- change directory to the file in the current window
 -- opt.autocomplete		    -- enable automatic completion in insert mode
@@ -338,3 +338,4 @@ opt.writebackup = false
 -- opt.write		        -- writing to a file is allowed
 -- opt.writeany		        -- write to file with no need for "!" override
 -- opt.writedelay		    -- delay this many msec for each char (for debug)
+
