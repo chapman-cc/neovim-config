@@ -41,6 +41,7 @@ vim.pack.add(lazy_modules, { load = false })
 -- Configs
 require("config.options")
 require("config.keymap")
+require("config.autocmd")
 
 -- On load
 vim.api.nvim_create_autocmd("VimEnter", { callback = function()
