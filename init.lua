@@ -33,6 +33,8 @@ local lazy_modules = {
   { src = "https://github.com/nvim-telescope/telescope.nvim" },
   { src = "https://github.com/nvim-lua/plenary.nvim" },
   { src = "https://github.com/nvim-telescope/telescope-fzf-native.nvim" },
+  -- conform
+  { src = "https://github.com/stevearc/conform.nvim" },
 }
 
 vim.pack.add(eager_modules, { load = true })

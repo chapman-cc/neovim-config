@@ -17,6 +17,10 @@
       "src": "https://github.com/saghen/blink.cmp",
       "version": "1.0.0 - 2.0.0"
     },
+    "conform.nvim": {
+      "rev": "086a40dc7ed8242c03be9f47fbcee68699cc2395",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
     "koda.nvim": {
       "rev": "649b22865bacc481d381237e0a6fb1de6ee055b4",
       "src": "https://github.com/oskarnurm/koda.nvim"
