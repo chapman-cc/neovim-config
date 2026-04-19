@@ -13,6 +13,7 @@ opt.wrap = false              -- long lines wrap and continue on the next line
 opt.breakindent = true		    -- wrapped line repeats indent
 opt.showmode = false	        -- message on status line to show current mode
 -- 2. Performance & Behaviour
+opt.breakindent = true        -- wrapped line repeats indent
 opt.scrolloff = 8             -- minimum nr. of lines above and below cursor
 opt.sidescrolloff = 10        -- min. nr. of columns to left and right of cursor
 opt.undofile = true           -- save undo information in a file
