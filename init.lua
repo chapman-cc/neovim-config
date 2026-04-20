@@ -36,7 +36,9 @@ local lazy_modules = {
   -- conform
   { src = "https://github.com/stevearc/conform.nvim" },
   -- gitsigns
-  { src = "https://github.com/lewis6991/gitsigns.nvim" }
+  { src = "https://github.com/lewis6991/gitsigns.nvim" },
+  -- todo-comments
+  { src = "https://github.com/folke/todo-comments.nvim" },
 }
 
 vim.pack.add(eager_modules, { load = true })
