@@ -1,11 +1,7 @@
-local wk = require("which-key")
+wk = require("which-key")
 
-wk.setup({ preset = "helix" })
+wk.setup({ preset = "helix", })
 
 wk.add({
-  "<leader>?",
-  function()
-    wk.show({ global = true })
-  end,
-  desc = "Buffer Local Keymaps (which-key)",
+  { "<leader>?", function() wk.show({ global = true }) end, desc = "Buffer Local Keymaps (which-key)" },
 })
