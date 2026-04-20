@@ -50,7 +50,7 @@ require("config.autocmd")
 -- On load
 vim.api.nvim_create_autocmd("VimEnter", {
   desc = "Actions on Loaded",
-  group = vim.api.nvim_create_augroup("On Loaded"),
+  group = vim.api.nvim_create_augroup("On Loaded", { clear = true }),
   callback = function()
     vim.cmd.colorscheme("tokyonight-storm")
     -- Update Mason parser
