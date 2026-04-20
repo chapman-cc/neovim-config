@@ -35,6 +35,8 @@ local lazy_modules = {
   { src = "https://github.com/nvim-telescope/telescope-fzf-native.nvim" },
   -- conform
   { src = "https://github.com/stevearc/conform.nvim" },
+  -- gitsigns
+  { src = "https://github.com/lewis6991/gitsigns.nvim" }
 }
 
 vim.pack.add(eager_modules, { load = true })
@@ -47,6 +49,8 @@ require("config.autocmd")
 
 -- On load
 vim.api.nvim_create_autocmd("VimEnter", {
+  desc = "Actions on Loaded",
+  group = vim.api.nvim_create_augroup("On Loaded"),
   callback = function()
     vim.cmd.colorscheme("tokyonight-storm")
     -- Update Mason parser
