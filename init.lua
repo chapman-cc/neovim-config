@@ -39,6 +39,7 @@ local lazy_modules = {
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 	-- todo-comments
 	{ src = "https://github.com/folke/todo-comments.nvim" },
+	{ src = "htts://github.com/nvim-mini/mini.nvim" },
 }
 
 vim.pack.add(eager_modules, { load = true })
