@@ -1,6 +1,6 @@
 local servers = {
   -- LUA
-  "lua_ls",
+  "lua_ls", "emmylua_ls", "stylua",
   -- Vim
   "vimls",
   -- Html
