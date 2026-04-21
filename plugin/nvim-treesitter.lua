@@ -1,4 +1,4 @@
-require("nvim-treesitter").install({
+require("nvim-treesitter").install {
 	"bash",
 	"comment",
 	"css",
@@ -45,7 +45,7 @@ require("nvim-treesitter").install({
 	"xml",
 	"yaml",
 	"zsh",
-})
+}
 
 local ts_group = vim.api.nvim_create_augroup("LazyTreesitter", { clear = false })
 
@@ -57,7 +57,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		if not has_loaded then
 			return print(ts)
 		end
-		print("Installing js / ts")
-		ts.install({ "javascript", "typescript" })
+		print "Installing js / ts"
+		ts.install { "javascript", "typescript" }
 	end,
 })

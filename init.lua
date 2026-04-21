@@ -10,7 +10,7 @@ local eager_modules = {
 	-- nvim-treesitter
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
 	--	blink.cmp
-	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1.0") },
+	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range "^1.0" },
 	{ src = "https://github.com/alexandre-abrioux/blink-cmp-npm.nvim" },
 	{ src = "https://github.com/disrupted/blink-cmp-conventional-commits" },
 	{ src = "https://github.com/moyiz/blink-emoji.nvim" },
@@ -45,16 +45,16 @@ vim.pack.add(eager_modules, { load = true })
 vim.pack.add(lazy_modules, { load = false })
 
 -- Configs
-require("config.options")
-require("config.keymap")
-require("config.autocmd")
+require "config.options"
+require "config.keymap"
+require "config.autocmd"
 
 -- On load
 vim.api.nvim_create_autocmd("VimEnter", {
 	desc = "Actions on Loaded",
 	callback = function()
-		vim.cmd.colorscheme("tokyonight-storm")
+		vim.cmd.colorscheme "tokyonight-storm"
 		-- Update Mason parser
-		vim.cmd("MasonUpdate")
+		vim.cmd "MasonUpdate"
 	end,
 })

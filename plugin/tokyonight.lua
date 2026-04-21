@@ -1,4 +1,4 @@
-require "tokyonight".setup {
-  style = "storm",
-  transparent = false,
+require("tokyonight").setup {
+	style = "storm",
+	transparent = false,
 }

@@ -1,5 +1,6 @@
 local opt = vim.opt
 
+-- stylua: ignore start
 -- 1. Interface & UI
 opt.background = "dark"       -- "dark" or "light", used for highlight colors
 opt.number = true             -- print the line number in front of each line
@@ -14,7 +15,7 @@ opt.scrolloff = 8             -- minimum nr. of lines above and below cursor
 opt.sidescrolloff = 10        -- min. nr. of columns to left and right of cursor
 opt.undofile = true           -- save undo information in a file
 opt.undolevels = 10000        -- maximum number of changes that can be undone
--- opt.undodir		        -- where to store undo files
+-- opt.undodir		            -- where to store undo files
 opt.updatetime = 200          -- after this many milliseconds flush swap file
 opt.clipboard = "unnamedplus" -- use the clipboard as the unnamed register
 opt.mouse = "a"               -- enable the use of mouse clicks
@@ -33,13 +34,13 @@ opt.smartcase = true          -- no ignore case when pattern has uppercase
 opt.inccommand = "nosplit"
 
 -- 5. Windows, split
-opt.splitbelow = true -- new window from split is below the current one
-opt.splitright = true -- new window is put right of the current one
+opt.splitbelow = true         -- new window from split is below the current one
+opt.splitright = true         -- new window is put right of the current one
 -- 6. Disable backup
-opt.autowrite = true  -- automatically write file if changed
-opt.backup = false    -- keep backup file after overwriting a file
-opt.writebackup = false
--- make a backup before overwriting a file
+opt.autowrite = true          -- automatically write file if changed
+opt.backup = false            -- keep backup file after overwriting a file
+opt.writebackup = false       -- make a backup before overwriting a file
+-- stylua: ignore end
 
 -- opt.autochdir		    -- change directory to the file in the current window
 -- opt.autocomplete		    -- enable automatic completion in insert mode
@@ -338,4 +339,3 @@ opt.writebackup = false
 -- opt.write		        -- writing to a file is allowed
 -- opt.writeany		        -- write to file with no need for "!" override
 -- opt.writedelay		    -- delay this many msec for each char (for debug)
-
