@@ -29,7 +29,6 @@ require("nvim-treesitter").install({
 	"jsx",
 	"lua",
 	"luadoc",
-	"markdown_inline14",
 	"mermaid",
 	"nginx",
 	"rust",
