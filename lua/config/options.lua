@@ -10,6 +10,8 @@ opt.cursorline = true         -- highlight the screen line of the cursor
 opt.signcolumn = "yes"        -- when :and how to display the sign column
 opt.laststatus = 3            -- tells when last window has status lines
 opt.wrap = false              -- long lines wrap and continue on the next line
+opt.breakindent = true		    -- wrapped line repeats indent
+opt.showmode = false	        -- message on status line to show current mode
 -- 2. Performance & Behaviour
 opt.scrolloff = 8             -- minimum nr. of lines above and below cursor
 opt.sidescrolloff = 10        -- min. nr. of columns to left and right of cursor
@@ -57,7 +59,6 @@ opt.writebackup = false       -- make a backup before overwriting a file
 -- opt.binary		        -- read/write/edit file in binary mode
 -- opt.bomb		            -- prepend a Byte Order Mark to the file
 -- opt.breakat		        -- characters that may cause a line break
--- opt.breakindent		    -- wrapped line repeats indent
 -- opt.breakindentopt		-- settings for 'breakindent'
 -- opt.browsedir		    -- which directory to start browsing in
 -- opt.bufhidden		    -- what to do when buffer is no longer in window
@@ -261,7 +262,6 @@ opt.writebackup = false       -- make a backup before overwriting a file
 -- opt.showcmdloc		    -- where to show (partial) command
 -- opt.showfulltag		    -- show full tag pattern when completing tag
 -- opt.showmatch		    -- briefly jump to matching bracket if insert one
--- opt.showmode		        -- message on status line to show current mode
 -- opt.showtabline		    -- tells when the tab pages line is displayed
 -- opt.sidescroll		    -- minimum number of columns to scroll horizontal
 -- opt.smarttab		        -- <Tab> in leading whitespace indents by 'shiftwidth'
