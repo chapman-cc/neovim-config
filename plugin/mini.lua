@@ -1,3 +1,21 @@
+-- General Workflow
+-- require("mini.basics").setup()
+-- require"mini.bracketed".setup()
+-- require"mini.bufremove".setup()
+-- require"mini.clue".setup()
+-- require"mini.cmdline".setup()
+-- require"mini.deps".setup()
+-- require"mini.diff".setup()
+-- require"mini.extra".setup()
+-- require"mini.files".setup()
+-- require"mini.git".setup()
+-- require"mini.jump".setup()
+-- require"mini.jump2d".setup()
+-- require"mini.misc".setup()
+-- require"mini.pick".setup()
+-- require"mini.sessions".setup()
+-- require"mini.visits".setup()
+
 local mini_group = vim.api.nvim_create_augroup("Mini Plugins", { clear = true })
 
 -- Text Editing
@@ -12,34 +30,10 @@ vim.api.nvim_create_autocmd("VimEnter", {
 		-- require"mini.keymap".setup()
 		-- require"mini.move".setup()
 		-- require"mini.operators".setup()
-		-- require"mini.pairs".setup()
+		require("mini.pairs").setup()
 		-- require"mini.snippets".setup()
-		-- require"mini.splitjoin".setup()
+		require("mini.splitjoin").setup()
 		-- require"mini.surround".setup()
-	end,
-})
-
--- General Workflow
-
-vim.api.nvim_create_autocmd("VimEnter", {
-	group = mini_group,
-	callback = function()
-		require("mini.basics").setup()
-		-- require"mini.bracketed".setup()
-		-- require"mini.bufremove".setup()
-		-- require"mini.clue".setup()
-		-- require"mini.cmdline".setup()
-		-- require"mini.deps".setup()
-		-- require"mini.diff".setup()
-		-- require"mini.extra".setup()
-		-- require"mini.files".setup()
-		-- require"mini.git".setup()
-		-- require"mini.jump".setup()
-		-- require"mini.jump2d".setup()
-		-- require"mini.misc".setup()
-		-- require"mini.pick".setup()
-		-- require"mini.sessions".setup()
-		-- require"mini.visits".setup()
 	end,
 })
 
@@ -57,6 +51,8 @@ vim.api.nvim_create_autocmd("VimEnter", {
 		require("mini.icons").setup { style = "glyph" }
 		require("mini.indentscope").setup()
 		-- require"mini.init".setup()
+		-- TODO: fix encoding after open
+		-- TODO: add open by default
 		require("mini.map").setup()
 		require("mini.notify").setup()
 		-- require"mini.starter".setup()
@@ -71,3 +67,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
 -- require"mini.doc".setup()
 -- require"mini.fuzzy".setup()
 -- require"mini.test".setup()
+--
+--
+--
