@@ -1,3 +1,5 @@
+-- TODO:
+-- check out how to do diagnostic keymap
 vim.g.mapleader = " "
 
 vim.g.maplocalleader = " "
@@ -36,9 +38,11 @@ local lazy_modules = {
 	-- conform
 	{ src = "https://github.com/stevearc/conform.nvim" },
 	-- gitsigns
+	-- TODO: read gitsigns usage and setup
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 	-- todo-comments
 	{ src = "https://github.com/folke/todo-comments.nvim" },
+	-- mini-plugins
 	{ src = "htts://github.com/nvim-mini/mini.nvim" },
 }
 
