@@ -40,6 +40,7 @@ local lazy_modules = {
 	-- gitsigns
 	-- TODO: read gitsigns usage and setup
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
+	{ src = "https://github.com/akinsho/bufferline.nvim" },
 	-- todo-comments
 	{ src = "https://github.com/folke/todo-comments.nvim" },
 	-- mini-plugins
